@@ -4,14 +4,16 @@ var namespace = "http://www.w3.org/2000/svg"
 var turn = "player1"
 function squareOne() {
   if(turn == "player1") {
+    player1 = "circle"
     turn = "player2"
-  }else{
+  } else{
+    player2 = "rect"
     turn = "player1"
   }
 }
 
 function makeShape1() {
-  turn = "player1"
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 74)
@@ -19,9 +21,22 @@ function makeShape1() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "red")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else{
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 74)
+  rect.setAttribute("y", 75)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
-turn = "player2"
+
 function makeShape2() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 74)
@@ -29,9 +44,22 @@ function makeShape2() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "blue")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else{
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 74)
+  rect.setAttribute("y", 125)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
-turn = "player"
+
 function makeShape3() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 74)
@@ -39,9 +67,22 @@ function makeShape3() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "purple")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 74)
+  rect.setAttribute("y", 175)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
 
 function makeShape4() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 125)
@@ -49,9 +90,22 @@ function makeShape4() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "green")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 125)
+  rect.setAttribute("y", 75)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
 
 function makeShape5() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 125)
@@ -59,9 +113,22 @@ function makeShape5() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "white")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 125)
+  rect.setAttribute("y", 125)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
 
 function makeShape6() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 125)
@@ -69,9 +136,22 @@ function makeShape6() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "cyan")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 125)
+  rect.setAttribute("y", 175)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
 
 function makeShape7() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 175)
@@ -79,9 +159,22 @@ function makeShape7() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "magenta")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 175)
+  rect.setAttribute("y", 75)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
 
 function makeShape8() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 175)
@@ -89,9 +182,22 @@ function makeShape8() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "gold")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 175)
+  rect.setAttribute("y", 125)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
 
 function makeShape9() {
+  var turn = "player1"
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 175)
@@ -99,4 +205,16 @@ function makeShape9() {
   circle.setAttribute("r", 20)
   circle.setAttribute("fill", "skyblue")
   canvas.appendChild(circle)
+  currentShape = "rect"
+  } else {
+  var turn = "player2"
+  var canvas = document.getElementById("game-board")
+  var rect = document.createElementNS(namespace, "rect")
+  rect.setAttribute("x", 175)
+  rect.setAttribute("y", 175)
+  rect.setAttribute("width", 20)
+  rect.setAttribute("height", 20)
+  canvas.appendChild(rect)
+  currentShape = "circle"
+  }
 }
