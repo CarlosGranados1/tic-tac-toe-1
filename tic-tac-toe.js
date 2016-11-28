@@ -2,12 +2,33 @@
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
 var turn = "player1"
-function squareOne() {
+function makeShape1() {
   if(turn == "player1") {
-    player1 = "circle"
+    var circle = document.createElementNS(namespace, "circle")
+    circle.setAttribute("cx", 74)
+    circle.setAttribute("cy", 75)
+    circle.setAttribute("r", 20)
+    var canvas = document.
     turn = "player2"
   } else{
-    player2 = "rect"
+    var rect = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", 74)
+    rect.setAttribute("y", 75)
+    rect.setAttribute("width", 20)
+    rect.setAttribute("height", 20)
+    turn = "player1"
+  }
+}
+
+function midLeft() {
+  if(turn == "player1"){
+    var circle = documnet.createElementNS(namespace, "circle")
+    circle.setAttribute("cx", 74)
+    circle.setAttribute("cy", 75)
+    circle.setAttribute("r", 20)
+    turn = "player2"
+  }else{
+    //create rect in top middle
     turn = "player1"
   }
 }
