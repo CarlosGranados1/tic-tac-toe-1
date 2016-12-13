@@ -1,241 +1,267 @@
 // Write all your JavaScript code in this file!
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
-var turn = "player1"
-function makeShape1() {
-  if(turn == "player1") {
+var currentPlayer = 1
+var topleftclick = 007
+function makeShape1(){
+  if (currentPlayer == 1){
+    if (topleftclick == 007) {
+      var circle = document.createElementNS(namespace, "circle")
+      circle.setAttribute("cx", "75")
+      circle.setAttribute("cy", "75")
+      circle.setAttribute("r", "20")
+      circle.setAttribute("fill", "red")
+      var canvas = document.getElementById("game-board")
+      canvas.appendChild(circle)
+      topleftclick= "spy"
+      currentPlayer= 2
+  }
+}else if (currentPlayer == 2){
+  if (topleftclick == 007) {
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "75")
+    rect.setAttribute("y", "75")
+    rect.setAttribute("height", "20")
+    rect.setAttribute("width", "20")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    topleftfclick= "spy"
+    currentPlayer= 1
+    }
+  }
+}
+
+var topMiddleClick= 007
+function makeShape2(){
+  if (currentPlayer == 1){
+    if (topMiddleClick == 007){
+      var circle = document.createElementNS(namespace, "circle")
+      circle.setAttribute("cx", "75")
+      circle.setAttribute("cy", "75")
+      circle.setAttribute("r", "50")
+      circle.setAttribute("fill", "blue")
+      var canvas = document.getElementById("game-board")
+      canvas.appendChild(circle)
+      topMiddleClick= spy
+      currentPlayer= 2
+    }
+  }else if (currentPlayer == 2) {
+    if (topMiddleClick == 007){
+      var square = document.createElementNS(namespace, "rect")
+      rect.setAttribute("x", "110")
+      rect.setAttribute("y", "10")
+      rect.setAttribute("height", "80")
+      rect.setAttribute("width", "80")
+      rect.setAttribute("fill", "blue")
+      var canvas = document.getElementById("game-board")
+      canvas.appendChild(rect)
+      topMiddleClick= spy
+      currentPlayer= 1
+    }
+  }
+}
+
+  var topRightClick= 007
+  function makeShape3(){
+    if (currentPlayer == 1){
+      if (topRightClick == 007){
     var circle = document.createElementNS(namespace, "circle")
-    circle.setAttribute("cx", 74)
-    circle.setAttribute("cy", 75)
-    circle.setAttribute("r", 20)
-    var canvas = document.
-    turn = "player2"
-  } else{
-    var rect = document.createElementNS(namespace, "rect")
-    rect.setAttribute("x", 74)
-    rect.setAttribute("y", 75)
-    rect.setAttribute("width", 20)
-    rect.setAttribute("height", 20)
-    turn = "player1"
+    circle.setAttribute("cx", "250")
+    circle.setAttribute("cy", "50")
+    circle.setAttribute("r", "50")
+    circle.setAttribute("fill", "red")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(circle)
+    topRightClick= spy
+    currentPlayer= 2
+    }
+}else if (currentPlayer == 2) {
+  if (topRightClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "210")
+    rect.setAttribute("y", "10")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    topRightClick= spy
+    currentPlayer= 1
+    }
   }
 }
-
-function midLeft() {
-  if(turn == "player1"){
-    var circle = documnet.createElementNS(namespace, "circle")
-    circle.setAttribute("cx", 74)
-    circle.setAttribute("cy", 75)
-    circle.setAttribute("r", 20)
-    turn = "player2"
-  }else{
-    //create rect in top middle
-    turn = "player1"
-  }
-}
-
-function makeShape1() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
+var middleLeftClick= 007
+function makeShape4(){
+  if (currentPlayer == 1){
+    if (middleLeftClick == 007){
   var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 74)
-  circle.setAttribute("cy", 75)
-  circle.setAttribute("r", 20)
+  circle.setAttribute("cx", "50")
+  circle.setAttribute("cy", "150")
+  circle.setAttribute("r", "50")
   circle.setAttribute("fill", "red")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else{
-  var turn = "player2"
   var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 74)
-  rect.setAttribute("y", 75)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+  canvas.appendChild(circle)
+  middleLeftClick= spy
+  currentPlayer= 2
+  }
+}else if (currentPlayer == 2) {
+  if (middleLeftClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "10")
+    rect.setAttribute("y", "110")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    middleLeftClick= spy
+    currentPlayer= 1
+    }
   }
 }
-
-function makeShape2() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
+var middleClick= 007
+function makeShape5(){
+  if (currentPlayer == 1){
+    if (middleClick == 007){
   var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 74)
-  circle.setAttribute("cy", 125)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "blue")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else{
-  var turn = "player2"
+  circle.setAttribute("cx", "150")
+  circle.setAttribute("cy", "150")
+  circle.setAttribute("r", "50")
+  circle.setAttribute("fill", "red")
   var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 74)
-  rect.setAttribute("y", 125)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+  canvas.appendChild(circle)
+  middleClick= spy
+  currentPlayer= 2
+  }
+}else if (currentPlayer == 2) {
+  if (middleClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "110")
+    rect.setAttribute("y", "110")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    middleClick= spy
+    currentPlayer= 1
+    }
   }
 }
-
-function makeShape3() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
+var middleRightClick= 007
+function makeShape6(){
+  if (currentPlayer == 1){
+    if (middleRightClick == 007){
   var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 74)
-  circle.setAttribute("cy", 175)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "purple")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
+  circle.setAttribute("cx", "250")
+  circle.setAttribute("cy", "150")
+  circle.setAttribute("r", "50")
+  circle.setAttribute("fill", "red")
   var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 74)
-  rect.setAttribute("y", 175)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+  canvas.appendChild(circle)
+  middleRightClick= spy
+  currentPlayer= 2
+  }
+}else if (currentPlayer == 2) {
+  if (middleRightClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "210")
+    rect.setAttribute("y", "110")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    middleRightClick= spy
+    currentPlayer= 1
+    }
   }
 }
-
-function makeShape4() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
+var bottomLeftClick= 007
+function makeShape7(){
+  if (currentPlayer == 1){
+    if (bottomLeftClick == 007){
   var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 125)
-  circle.setAttribute("cy", 75)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "green")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
+  circle.setAttribute("cx", "50")
+  circle.setAttribute("cy", "250")
+  circle.setAttribute("r", "50")
+  circle.setAttribute("fill", "red")
   var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 125)
-  rect.setAttribute("y", 75)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+  canvas.appendChild(circle)
+  bottomLeftClick= spy
+  currentPlayer= 2
+  }
+}else if (currentPlayer == 2) {
+  if (bottomLeftClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "10")
+    rect.setAttribute("y", "210")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    bottomLeftClick= spy
+    currentPlayer= 1
+    }
   }
 }
-
-function makeShape5() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
+var bottomMiddleClick= 007
+function makeShape8(){
+  if (currentPlayer == 1){
+    if (bottomMiddleClick == 007){
   var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 125)
-  circle.setAttribute("cy", 125)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "white")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
+  circle.setAttribute("cx", "150")
+  circle.setAttribute("cy", "250")
+  circle.setAttribute("r", "50")
+  circle.setAttribute("fill", "red")
   var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 125)
-  rect.setAttribute("y", 125)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+  canvas.appendChild(circle)
+  bottomMiddleClick= spy
+  currentPlayer= 2
+  }
+}else if (currentPlayer == 2) {
+  if (bottomMiddleClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "110")
+    rect.setAttribute("y", "210")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    bottomMiddleClick= spy
+    currentPlayer= 1
+    }
   }
 }
-
-function makeShape6() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
+var bottomRightClick= 007
+function makeShape9(){
+  if (currentPlayer == 1){
+    if (bottomRightClick == 007){
   var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 125)
-  circle.setAttribute("cy", 175)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "cyan")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
+  circle.setAttribute("cx", "250")
+  circle.setAttribute("cy", "250")
+  circle.setAttribute("r", "50")
+  circle.setAttribute("fill", "red")
   var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 125)
-  rect.setAttribute("y", 175)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+  canvas.appendChild(circle)
+  bottomRightClick= spy
+  currentPlayer= 2
   }
-}
-
-function makeShape7() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
-  var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 175)
-  circle.setAttribute("cy", 75)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "magenta")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
-  var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 175)
-  rect.setAttribute("y", 75)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
-  }
-}
-
-function makeShape8() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
-  var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 175)
-  circle.setAttribute("cy", 125)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "gold")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
-  var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 175)
-  rect.setAttribute("y", 125)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
-  }
-}
-
-function makeShape9() {
-  var turn = "player1"
-  var canvas = document.getElementById("game-board")
-  var circle = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 175)
-  circle.setAttribute("cy", 175)
-  circle.setAttribute("r", 20)
-  circle.setAttribute("fill", "skyblue")
-  canvas.appendChild(circle)
-  currentShape = "rect"
-  } else {
-  var turn = "player2"
-  var canvas = document.getElementById("game-board")
-  var rect = document.createElementNS(namespace, "rect")
-  rect.setAttribute("x", 175)
-  rect.setAttribute("y", 175)
-  rect.setAttribute("width", 20)
-  rect.setAttribute("height", 20)
-  canvas.appendChild(rect)
-  currentShape = "circle"
+}else if (currentPlayer == 2) {
+  if (bottomRightClick == 007){
+    var square = document.createElementNS(namespace, "rect")
+    rect.setAttribute("x", "210")
+    rect.setAttribute("y", "210")
+    rect.setAttribute("height", "80")
+    rect.setAttribute("width", "80")
+    rect.setAttribute("fill", "blue")
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(rect)
+    bottomRightClick= spy
+    currentPlayer= 1
+    }
   }
 }
