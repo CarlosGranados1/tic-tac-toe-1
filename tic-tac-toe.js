@@ -18,11 +18,11 @@ function makeShape1(){
   }
 }else if (currentPlayer == 2){
   if (topleftclick == 007) {
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "75")
     rect.setAttribute("y", "75")
-    rect.setAttribute("height", "25")
-    rect.setAttribute("width", "25")
+    rect.setAttribute("height", "20")
+    rect.setAttribute("width", "20")
     rect.setAttribute("fill", "blue")
     var canvas = document.getElementById("game-board")
     canvas.appendChild(rect)
@@ -37,10 +37,10 @@ function makeShape2(){
   if (currentPlayer == 1){
     if (topMiddleClick == 007){
       var circle = document.createElementNS(namespace, "circle")
-      circle.setAttribute("cx", "75")
-      circle.setAttribute("cy", "85")
-      circle.setAttribute("r", "20")
-      circle.setAttribute("fill", "blue")
+      circle.setAttribute("cx", "100")
+      circle.setAttribute("cy", "100")
+      circle.setAttribute("r", 100)
+      circle.setAttribute("fill", "red")
       var canvas = document.getElementById("game-board")
       canvas.appendChild(circle)
       topMiddleClick= "spy"
@@ -48,11 +48,11 @@ function makeShape2(){
     }
   }else if (currentPlayer == 2) {
     if (topMiddleClick == 007){
-      var square = document.createElementNS(namespace, "rect")
-      rect.setAttribute("x", "110")
-      rect.setAttribute("y", "10")
-      rect.setAttribute("height", "80")
-      rect.setAttribute("width", "80")
+      var rect = document.createElementNS(namespace, "rect")
+      rect.setAttribute("x", "100")
+      rect.setAttribute("y", "100")
+      rect.setAttribute("height", "10")
+      rect.setAttribute("width", "10")
       rect.setAttribute("fill", "blue")
       var canvas = document.getElementById("game-board")
       canvas.appendChild(rect)
@@ -78,7 +78,7 @@ function makeShape2(){
     }
 }else if (currentPlayer == 2) {
   if (topRightClick == 007){
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "210")
     rect.setAttribute("y", "10")
     rect.setAttribute("height", "80")
@@ -136,7 +136,7 @@ function makeShape5(){
   }
 }else if (currentPlayer == 2) {
   if (middleClick == 007){
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "110")
     rect.setAttribute("y", "110")
     rect.setAttribute("height", "80")
@@ -165,7 +165,7 @@ function makeShape6(){
   }
 }else if (currentPlayer == 2) {
   if (middleRightClick == 007){
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "210")
     rect.setAttribute("y", "110")
     rect.setAttribute("height", "80")
@@ -194,7 +194,7 @@ function makeShape7(){
   }
 }else if (currentPlayer == 2) {
   if (bottomLeftClick == 007){
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "10")
     rect.setAttribute("y", "210")
     rect.setAttribute("height", "80")
@@ -223,7 +223,7 @@ function makeShape8(){
   }
 }else if (currentPlayer == 2) {
   if (bottomMiddleClick == 007){
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "110")
     rect.setAttribute("y", "210")
     rect.setAttribute("height", "80")
@@ -252,7 +252,7 @@ function makeShape9(){
   }
 }else if (currentPlayer == 2) {
   if (bottomRightClick == 007){
-    var square = document.createElementNS(namespace, "rect")
+    var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", "210")
     rect.setAttribute("y", "210")
     rect.setAttribute("height", "80")
